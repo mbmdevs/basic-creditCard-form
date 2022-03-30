@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Form Project by | WebDeveloperMentor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="credit-card">
+        <div class="credit-img">
+            <img src="img/cc-logo.png" alt="" class="cc-logo">
+            <img src="img/visa-logo.png" alt="" class="visa-logo">
+        </div>
+        <div class="card-no">
+            <p>4242</p>
+            <p style="font-size: 18px;letter-spacing: 5px;">****</p>
+            <p style="font-size: 18px;letter-spacing: 5px;">****</p>
+            <p>4242</p>
+        </div>
+        <div class="card-info">
+            <div class="holder">
+                <p>Card Holder</p>
+                <h6>CSABA CISSI</h6>
+            </div>
+            <div class="expires">
+                <p>Expires</p>
+                <h6>02/03</h6>
+            </div>
+        </div>
+    </div> 
+        <!--The form Content-->
+    <form action="">
+        <label for="card-num">Card Number</label><br>
+        <input inputmode="numeric" minlength="16" maxlength="19" required id="card-num">
+        <label for="card-holder">Card Holder</label>
+        <input type="text" id="card-holder" required>
+        <div class="dates">
+            <div class="dates-box box1">
+                <label for="">Expiration Date</label> 
+                <select name="expiry-date" id="expiry-date">
+                    <option value="">01</option>
+                    <option value="">02</option>
+                    <option value="">03</option>
+                </select>
+            </div>
+             
+            <div class="dates-box box2">
+                <label style="color:transparent">year</label>
+                <select name="year" id="e">
+                    <option value="">2022</option>
+                    <option value="">2021</option>
+                    <option value="">2020</option>
+                </select>
+            </div>
+             
+            <div class="dates-box box3">
+                <label for="cvv">CVV</label>
+								<!-- Use inputmode="numeric" its better than using number-->
+                <input type="" inputmode="numeric" id="cvv">
+            </div>
+        </div>
+         <button>Submit</button>
+     </form>
+</body>
+</html>

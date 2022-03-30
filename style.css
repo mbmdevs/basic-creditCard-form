@@ -1,0 +1,189 @@
+/*****Global Styling***/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    --main-font:1.3rem;
+    --small-font:1rem;
+    --font-weight:400;
+}
+body {
+    padding:10px 20px;
+    min-height: 100vh;
+    font-size: var(--main-font);
+    background-color: #f4f4f4;
+    font-weight: var(--font-weight);
+    display:grid;
+    place-items: center;
+
+}
+a,
+p,
+label {
+    font-size:var(--small-font);
+    color:#4a4a4a;
+    font-weight: var(--font-weight);
+}
+
+form {
+    background-color: white;
+    width:30%;
+    padding:5rem 4rem 4rem 4rem;
+    border-radius: 20px;
+    box-shadow: -1px  10px 10px rgba(0,0,0,0.1);
+    position: absolute;
+}
+
+form label {
+    font-size: var(--main-font);
+    color:black;
+    opacity: 50%;
+    /* font-family:; */
+
+}
+form input {
+    width:100%;
+    height:30px;
+    border:1px solid #d1d1d1;
+    border-radius: 5px;
+    outline: none;
+    padding:0 10px;
+    margin:5px 0 20px 0;
+    font-size: 1.4rem;
+}
+
+form button {
+    font-size: 16px;
+    background:#0072fa;
+    color:white;
+    width:100%;
+    padding:10px 0;
+    border-radius: 7px;
+    border:none;
+    cursor: pointer;
+}
+form button:active {
+    background:#fff;
+    border:2px solid #0072fa;
+    outline: none;
+    color:#0072fa;
+
+}
+form .dates {
+    font-size: var(--small-font);
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:10px;
+}
+select, .dates-box input {
+    padding:5px 30px 5px 5px;
+    margin: 5px 0px 25px 0;
+    width:8vw;
+    border:1px solid #d1d1d1;
+    border-radius: 7px;
+    outline: none;
+    background: #fff;
+    font-size: 1.5rem;
+}
+/************STYLING  THE CREDIT CARD*********/
+.credit-card {
+    z-index: 3;
+    background-image:linear-gradient(#175b64,#0b2f73,#020d3d);
+    width:300px;
+    min-height:170px;
+    padding:20px 20px 10px 20px;
+    color: #f6f6f6;;
+    position:absolute;
+    top:50px;
+    border-radius:20px;
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.4);
+}
+.credit-img {
+    display:flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom:30px;
+}
+.credit-card .cc-logo {
+    width:2.5vw;
+    height:2vw;
+
+}
+.credit-card .visa-logo {
+    width:4vw;
+    height:20%;
+}
+
+.card-no {
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+}
+.card-no p {
+    margin-bottom:20px;
+    font-size: 1.5rem;
+    color:white;
+}
+
+.credit-card .card-info {
+    display:flex;
+    justify-content: space-between;
+}
+
+.credit-card .card-info p {
+    color:rgba(246, 246, 246,0.6);
+    font-size: var(--small-font);
+}
+.credit-card .card-info h6 {
+    font-size: var(--main-font);
+    letter-spacing: 2px;
+    color:rgba(255, 255, 255,0.8);
+}
+
+/******MEDIA QUERIES**********/
+@media screen and (max-width:1300px){
+    body {
+        width:100vw;
+    }
+    .credit-card {
+        position:absolute;
+        top:3%;
+    }
+    .credit-card .cc-logo {
+        width:40px;
+        height:30px;
+    }
+    .credit-card .visa-logo {
+        width:50px;
+        height:30px;
+    }
+    form {
+        position:absolute;
+        top:200px;
+        padding:4rem 2rem 4rem 2rem;
+        width:300px;
+    }
+    form .dates {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+   
+    .dates-box select {
+        width:100%;
+    } 
+    .dates-box input {
+        width:200%;
+    }
+}
+@media screen and (max-width:300px) {
+    .credit-card {
+        width:250px;
+        padding:20px 15px 5px 15px;;
+    }
+    form {
+        width: 250px;
+    }
+}
